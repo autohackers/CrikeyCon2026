@@ -2,6 +2,10 @@
 ![Autohackers Logo](https://autohackers.org/content/images/2023/05/ah-text-bw.png)
 ## Tesla Model Y 2024 CAN Bus interface
 
+The objective here was simply to gain access to the main CAN Bus in the vehicle, in order to see, and later modify, data on that bus in order to achieve things that the Tesla software may not allow the user to do.
+
+At CrikeyCon, we'll be interfacing using the [EVTV CANdue box](https://store.evtv.me/en-au/products/teslamodel3cankit2) that is using an ESP32 microcontroller with 2x CAN ports. The main reason for using this interface is that it was able to be purchased with the proprietary connectors needed to splice into the Y's CAN bus, which is located in the centre console, from the rear seats.
+
 ### FAQ
 Why a Tesla?
 * Multiple reasons, including:
@@ -10,6 +14,9 @@ Why a Tesla?
 
 Why do you support Tesla?
 * Autohackers does not 'support' any car manufacturer. This Tesla was bought before the very public CEO decided to exhibit his facist nature. The vehicle would not have been procured post that point... if any EV manufacturer has an equivalent vehicle they'd like to swap out for our Model Y at next to no cost, please get in touch.
+
+Safety
+* We're serious about safety, especially when it's not just 'me' working on a car directly! To that end, the rear wheel drive vehicle will be up on jack stands (at the rear) just in case a command is accepted that may make the rear wheels turn... can't have a Tesla roaming loose in the CrikeyCon CTF space! (Given the 'summon' feature exists, it is reasonable to assume the safeguards that would normally prevent a car from moving without a driver present are able to be bypassed in software alone, so extra safety measures are in place for this.) There's also chocks at the front wheels, to limit any rolling; even though a 2 ton car is hard to push-start by hand.
 
 ## Porsche 2004 CAN dashboard & RPi
 What was the purpose of this dashboard?
