@@ -9,7 +9,7 @@ Why a Tesla?
    * The idea of "hack a Tesla" would seem to appeal to more people than, say, "hack a Ford" or "hack a Hyundai"... and we already have "hack a Porsche" (albeit an older model, not an EV) in the Autohackers stable of vehicles.
 
 Why do you support Tesla?
-* Autohackers does not 'support' any car manufacturer. This Tesla was bought before the very public CEO decided to exhibit his facist nature. The vehicle would not have been procured post that...
+* Autohackers does not 'support' any car manufacturer. This Tesla was bought before the very public CEO decided to exhibit his facist nature. The vehicle would not have been procured post that point... if any EV manufacturer has an equivalent vehicle they'd like to swap out for our Model Y at next to no cost, please get in touch.
 
 ## Porsche 2004 CAN dashboard & RPi
 What was the purpose of this dashboard?
