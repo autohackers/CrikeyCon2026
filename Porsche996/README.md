@@ -29,13 +29,21 @@ You may note that the speedo needle only twitches towards the actual value. This
 2A8#FFFFA80E0F6DEFFF
 ```
 
-The quick way of doing this is to make a loop, such as encapsulating the cansend command like `while true; do  cansend can0 2A8#FFFFA80E0F6DEFFF; done;`
+The quick way of doing this is to make a loop, such as encapsulating the cansend command like
+
+`while true; do  cansend can0 2A8#FFFFA80E0F6DEFFF; done;`
 
 This can be seen in the `88mph.script`
 
 # Thermostat
 
-The CAN code for the thermostat on this dashboard is `289#`
+The CAN code for the thermostat on this dashboard is `289` and the 2nd byte is the value being displayed. From my research (eg rennlist forums) the formula for the 2nd byte is (where X is the value to be displayed, in Celsius) is (4614+(167*X))/100 (noting this is decimal and the output needs to be converted to HEX).
+
+So to display 100 C on the dashboard
+
+`while true; do cansend can0 289#00D5000000000000; done;`
+
+Reference [Rennlist Forum link](https://rennlist.com/forums/996-gt2-gt3-forum/966928-looking-for-can-bus-information-2.html) about half way down.
 
 # No Buffer Space Error
 
