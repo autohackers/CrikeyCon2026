@@ -2,9 +2,13 @@
 ![Autohackers Logo](https://autohackers.org/content/images/2023/05/ah-text-bw.png)
 ## Tesla Model Y 2024 CAN Bus interface
 
-The objective here was simply to gain access to the main CAN Bus in the vehicle, in order to see, and later modify, data on that bus in order to achieve things that the Tesla software may not allow the user to do.
+The objective here was simply to gain access to the main CAN Bus in the vehicle in order to see, and later modify, data on that bus in order to achieve things that the Tesla software may not allow the user to do.
 
 At CrikeyCon, we'll be interfacing using the [EVTV CANdue box](https://store.evtv.me/en-au/products/teslamodel3cankit2) that is using an ESP32 microcontroller with 2x CAN ports. The main reason for using this interface is that it was able to be purchased with the proprietary connectors needed to splice into the Y's CAN bus, which is located in the centre console, from the rear seats.
+
+To interface with the CANdue box, we're running [SavvyCAN](https://www.savvycan.com/) and [SavvyCAN github](https://github.com/collin80/SavvyCAN) for code and look at [SavvyCAN releases](https://github.com/collin80/SavvyCAN/releases/tag/continuous) for a quick binary download for your OS.
+
+SavvyCAN allows us to both view/capture data from the CAN bus and also insert frames back onto the bus. 
 
 ### FAQ
 Why a Tesla?
