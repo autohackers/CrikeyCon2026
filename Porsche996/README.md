@@ -9,3 +9,40 @@ There is a `candump-date.log` file in this folder. This is a capture of the CAN 
 If you want to send individual blocks of data (eg)
 `cansend can0 12A#001000323403450a`
  
+# Speedo
+
+The speedo (tachometer) can be addressed as the target `2A8` on the canbus.
+To send values to the speedo use
+
+`cansend can0 2A8#FFFFA80E0F6DEFFF`
+
+The value in this example is ~88mph.
+
+You may note that the speedo needle only twitches towards the actual value. This is due to the refresh rate - the speedo should actually receive a constant set of values, like:
+
+```
+2A8#FFFFA80E0F6DEFFF
+2A8#FFFFA80E0F6DEFFF
+2A8#FFFFA80E0F6DEFFF
+2A8#FFFFA80E0F6DEFFF
+2A8#FFFFA80E0F6DEFFF
+2A8#FFFFA80E0F6DEFFF
+```
+
+The quick way of doing this is to make a loop, such as encapsulating the cansend command like `while true; do  cansend can0 2A8#FFFFA80E0F6DEFFF; done;`
+
+This can be seen in the `88mph.script`
+
+# Thermostat
+
+The CAN code for the thermostat on this dashboard is `289#`
+
+# No Buffer Space Error
+
+If you get the 'no buffer space' error when using the PiCAN a reboot will generally fix this. However a better fix is (after a reboot) changing the buffer length with: 
+
+`sudo ifconfig can0 txqueuelen 1000`
+
+This fix has already been done on first boot however if the problem reoccurs, please reboot and run the above command.
+Further info [Stack overflow](https://stackoverflow.com/questions/40424433/write-no-buffer-space-available-socket-can-linux-can)
+
