@@ -1,5 +1,5 @@
 # Autohackers @ CrikeyCon 2026
-
+![Autohackers Logo](https://autohackers.org/content/images/2023/05/ah-text-bw.png)
 ## Tesla Model Y 2024 CAN Bus interface
 
 ### FAQ
@@ -17,3 +17,4 @@ What was the purpose of this dashboard?
 Original conference post https://autohackers.org/content-for-crikeycon8-ctf/
 
 * See the folder 'Porsche996' for example data dumps and code files for injection.
+
