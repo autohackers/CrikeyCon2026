@@ -1,0 +1,2 @@
+while true; do  cansend can0 2A8#FFFFA80E0F6DEFFF; done;
+
