@@ -12,5 +12,6 @@ Why do you support Tesla?
 * Autohackers does not 'support' any car manufacturer. This Tesla was bought before the very public CEO decided to exhibit his facist nature. The vehicle would not have been procured post that...
 
 ## Porsche 2004 CAN dashboard & RPi
-
-
+What was the purpose of this dashboard?
+* A few years ago we had a Porsche 996 (2004) at CrikeyCon with a RPi + PiCAN hat, wired into the 'drivetrain' CAN bus of the car. The remote dashboard could play back data captured in the vehicle and had a few CTF challenges associated with it. The primary use now is to be able to write CAN packets directly onto the bus to see how the dashboard reacts - "CAN 101" hands on learning, and testing of understanding (i.e. how the various bytes in a packet can be used to display data on devices).
+* See the folder 'Porsche 996' for example data dumps and code files for injection.
